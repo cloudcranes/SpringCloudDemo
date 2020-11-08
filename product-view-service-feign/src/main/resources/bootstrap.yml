@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        serviceId: config-server
+    #新增 but总线配置——消息总线Bus
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+#新增 rabbitMQ 配置——消息总线Bus
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: guest
+  password: guest

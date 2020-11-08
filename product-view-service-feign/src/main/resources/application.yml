@@ -1,0 +1,29 @@
+spring:
+  application:
+    name: product-view-service-feign
+  thymeleaf:
+    cache: false
+    encoding: utf-8
+    mode: HTML5
+    suffix: .html
+    prefix: classpath:/templates/
+    servlet:
+      content-type: text/html
+
+  #链路追踪服务器
+  zipkin:
+    base-url: http://localhost:9411
+
+#在配置文件里开启断路器
+feign.hystrix.enabled: true
+
+#新增路径访问允许：
+#这样才能访问 /actuator/bus-refresh
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"

@@ -1,0 +1,9 @@
+# Project exclude paths
+/config-server/target/
+/eureka-server/target/
+/hystrix-dashboard/target/
+/product-data-service/target/
+/product-view-service-feign/target/
+/product-view-service-ribbon/target/
+/turbine/target/
+/zuul/target/

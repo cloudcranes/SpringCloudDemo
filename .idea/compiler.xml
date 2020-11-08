@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="config-server" />
+        <module name="turbine" />
+        <module name="product-view-service-ribbon" />
+        <module name="product-view-service-feign" />
+        <module name="hystrix-dashboard" />
+        <module name="zuul" />
+        <module name="eureka-server" />
+        <module name="product-data-service" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="config-server" options="-parameters" />
+      <module name="eureka-server" options="-parameters" />
+      <module name="hystrix-dashboard" options="-parameters" />
+      <module name="product-data-service" options="-parameters" />
+      <module name="product-view-service-feign" options="-parameters" />
+      <module name="product-view-service-ribbon" options="-parameters" />
+      <module name="turbine" options="-parameters" />
+      <module name="zuul" options="-parameters" />
+    </option>
+  </component>
+</project>
